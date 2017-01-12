@@ -2,6 +2,7 @@
 <head>
     <title>OAR Login</title>
     <link rel="stylesheet" href="pane.css">
+
 </head>
 <body>
 
@@ -25,6 +26,23 @@
 <p>
     If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. Please refer to the OAR User Manual section 'Issues logging in to OAR' to determine the cause of the issue.
 </p>
+
+<script type="text/javascript">
+    var url = (window.location != window.parent.location)
+        ? document.referrer
+        : document.location.href;
+
+    if(document.createStyleSheet) {
+        document.createStyleSheet(url + '/css/sfdc_204.css');
+    }
+    else {
+        var styles = "@import url(' " + url + "/css/sfdc_204.css" + " ');";
+        var newSS=document.createElement('link');
+        newSS.rel='stylesheet';
+        newSS.href='data:text/css,'+escape(styles);
+        document.getElementsByTagName("head")[0].appendChild(newSS);
+    }
+</script>
 
 </body>
 
