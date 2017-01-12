@@ -1,6 +1,35 @@
 <html>
 <head>
     <title>OAR Login</title>
+
+
+    <script type="text/javascript">
+
+        function url_domain(data) {
+            var    a      = document.createElement('a');
+            a.href = data;
+            return a.hostname;
+        }
+
+        var url = (window.location != window.parent.location)
+            ? document.referrer
+            : document.location.href;
+
+        url = url_domain(url);
+
+        if(document.createStyleSheet) {
+            document.createStyleSheet(url + '/css/sfdc_204.css');
+        }
+        else {
+            var styles = "https://" + url + "/css/sfdc_204.css";
+            var newSS=document.createElement('link');
+            newSS.rel='stylesheet';
+            newSS.href=styles;
+            document.getElementsByTagName("head")[0].appendChild(newSS);
+        }
+    </script>
+
+
     <link rel="stylesheet" href="pane.css">
 
 </head>
@@ -26,32 +55,6 @@
 <p>
     If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. Please refer to the OAR User Manual section 'Issues logging in to OAR' to determine the cause of the issue.
 </p>
-
-<script type="text/javascript">
-
-    function url_domain(data) {
-        var    a      = document.createElement('a');
-        a.href = data;
-        return a.hostname;
-    }
-
-    var url = (window.location != window.parent.location)
-        ? document.referrer
-        : document.location.href;
-
-    url = url_domain(url);
-
-    if(document.createStyleSheet) {
-        document.createStyleSheet(url + '/css/sfdc_204.css');
-    }
-    else {
-        var styles = "https://" + url + "/css/sfdc_204.css";
-        var newSS=document.createElement('link');
-        newSS.rel='stylesheet';
-        newSS.href=styles;
-        document.getElementsByTagName("head")[0].appendChild(newSS);
-    }
-</script>
 
 </body>
 
