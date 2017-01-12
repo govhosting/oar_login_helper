@@ -28,9 +28,18 @@
 </p>
 
 <script type="text/javascript">
+
+    function url_domain(data) {
+        var    a      = document.createElement('a');
+        a.href = data;
+        return a.hostname;
+    }
+
     var url = (window.location != window.parent.location)
         ? document.referrer
         : document.location.href;
+
+    url = url_domain(url);
 
     if(document.createStyleSheet) {
         document.createStyleSheet(url + '/css/sfdc_204.css');
