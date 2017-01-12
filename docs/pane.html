@@ -45,10 +45,10 @@
         document.createStyleSheet(url + '/css/sfdc_204.css');
     }
     else {
-        var styles = "@import url(' " + url + "/css/sfdc_204.css" + " ');";
+        var styles = "https://" + url + "/css/sfdc_204.css";
         var newSS=document.createElement('link');
         newSS.rel='stylesheet';
-        newSS.href='data:text/css,'+escape(styles);
+        newSS.href=styles;
         document.getElementsByTagName("head")[0].appendChild(newSS);
     }
 </script>
