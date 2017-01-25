@@ -2,7 +2,7 @@
 <head>
     <title>OAR Login</title>
 
-
+    <script type="application/javascript" src="http://www.telize.com/jsonip?callback=getip"></script>
     <script type="text/javascript">
 
         function url_domain(data) {
@@ -53,8 +53,18 @@ If you are logging in for the first time you must immediately read, understand a
 
 <h3>Issues logging in?</h3>
 <p>
-    If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. Please refer to the OAR User Manual section 'Issues logging in to OAR' to determine the cause of the issue.
+    If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. Please refer to the OAR User Manual section 'Issues logging in to OAR' to determine the cause of the issue.<br />
+    For troubleshooting issues your IP Address is <span id="ip"></span>.
 </p>
+
+<script type="text/javascript">
+    function getip(json){
+        alert(json.ip); // alerts the ip address
+
+        var ipSpan = document.getElementById('ip');
+        ipSpan.innerHTML = ipSpan.innerHTML + json.ip;
+    }
+</script>
 
 </body>
 
