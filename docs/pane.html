@@ -1,38 +1,7 @@
+
 <html>
 <head>
     <title>OAR Login</title>
-
-    <script type="text/javascript">
-        var userip;
-    </script>
-    <script type="text/javascript" src="https://l2.io/ip.js?var=userip"></script>
-    <script type="text/javascript">
-
-        function url_domain(data) {
-            var    a      = document.createElement('a');
-            a.href = data;
-            return a.hostname;
-        }
-
-        var url = (window.location != window.parent.location)
-            ? document.referrer
-            : document.location.href;
-
-        url = url_domain(url);
-
-        if(document.createStyleSheet) {
-            document.createStyleSheet(url + '/css/sfdc_204.css');
-        }
-        else {
-            var styles = "https://" + url + "/css/sfdc_204.css";
-            var newSS=document.createElement('link');
-            newSS.rel='stylesheet';
-            newSS.href=styles;
-            document.getElementsByTagName("head")[0].appendChild(newSS);
-        }
-    </script>
-
-
     <link rel="stylesheet" href="pane.css">
 
 </head>
@@ -42,37 +11,17 @@
 <p>
     By accepting this message, you are acknowledging:
     <ol type="a">
-    <li>that you will or have read, understood and agree to comply with the <a href="https://test.directory.gov.au/sites/default/files/oar_terms_and_conditions.pdf" target="_blank">OAR Terms and Conditions</a> (https://test.directory.gov.au/sites/default/files/oar_terms_and_conditions.pdf); and</li>
+    <li>that you will or have read, understood and agree to comply with the OAR Terms and Conditions; and</li>
         <li>user activity is monitored and audited.</li>
     </ol>
 
-If you are logging in for the first time you must immediately read, understand and agree to comply with the <a href="https://test.directory.gov.au/sites/default/files/oar_terms_and_conditions.pdf" target="_blank">OAR Terms and Conditions</a> (https://test.directory.gov.au/sites/default/files/oar_terms_and_conditions.pdf), indicated by your continued access to OAR.
-</p>
-
-<h3>Notice for beta testing – do not use real AusGovBoards board member data</h3>
-<p>
-    OAR is currently in the beta testing stage and is not the source of truth of data for AGOR, AusGovBoards or Directory. Due to the sensitivity of personal AusGovBoards board member data, actual board member data will not be loaded into this system for testing purposes. During your testing, do not replicate actual board member data from the current AusGovBoards system and instead create dummy data when creating board members and board roles.
-</p>
-
-<h3>OAR Updaters Guide</h3>
-<p>
-    The <a href="http://test.directory.gov.au/OAR-updaters-guide" target="_blank">OAR Updaters Guide</a> (http://test.directory.gov.au/OAR-updaters-guide) provides an overview of the system and outlines the steps to perform key functions in the system.
+The OAR Terms and Conditions are available from the links list on the left side of the OAR home screen. If you are logging in for the first time you must immediately read, understand and agree to comply with the OAR Terms and Conditions, indicated by your continued access to OAR.
 </p>
 
 <h3>Issues logging in?</h3>
-<p style="color: red">
-    Please ensure you are logging in with your username, not email. Your username should be first.lastname@department.gov.au<b>.test</b>
-</p>
 <p>
-    If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. Please refer to the <a href="https://test.directory.gov.au/OAR-log-in-issue-resolution-guide" target="_blank">OAR - Log in issue and resolution guide</a> (https://test.directory.gov.au/OAR-log-in-issue-resolution-guide) to determine the cause of the issue.<br />
+If you have trouble logging in for the first time, it may not be as simple as your username and password being incorrect. There may be a number of reasons for this. To determine the cause of the issue, refer to the 'OAR - Log in issue and resolution guide' that was sent to you when your account was created. If you cannot find the resolution guide, please email <a href="mailto:support@directory.gov.au">support@directory.gov.au</a> with a description of the issue.<br />
     <br />
-    For troubleshooting issues your IP Address is <span id="ip"></span>.
-</p>
-
-<script type="text/javascript">
-        var ipSpan = document.getElementById('ip');
-        ipSpan.innerHTML = ipSpan.innerHTML + userip;
-</script>
 
 </body>
 
